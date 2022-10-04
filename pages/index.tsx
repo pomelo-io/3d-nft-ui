@@ -29,6 +29,20 @@ const Model = ({ipfs}: {ipfs: string}) => {
 }
 
 const Home: NextPage = () => {
+  const ipfs = [
+    "QmcsG8CR77AzUyyUfeWjSYFdfZsoRitsAnGzhc23Y7X1wC",
+    "QmXWcgFZePsavL9WrdpAAnWLXgw3kb5vqWMzZ7BczmyGri",
+    "QmbNoKJZJQWJW2BTzQcP9g3iLMmGiD1eLuWvJ8VN9ge4eG",
+  ]
+
+  const assets = ipfs.map((ipfs) => {
+    return <span className={styles.card}>
+      <h2>3D Asset &rarr;</h2>
+      <Scene ipfs={ipfs} />
+      <div className={styles.ipfs}>{ipfs}</div>
+    </span>
+  });
+
   return (
     <div className={styles.container}>
       <Head>
@@ -47,16 +61,7 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <span className={styles.card}>
-            <h2>3D Asset &rarr;</h2>
-            <Scene ipfs={"QmXWcgFZePsavL9WrdpAAnWLXgw3kb5vqWMzZ7BczmyGri"} />
-          </span>
-
-          <span className={styles.card}>
-            <h2>3D Asset &rarr;</h2>
-            <Scene ipfs={"QmbNoKJZJQWJW2BTzQcP9g3iLMmGiD1eLuWvJ8VN9ge4eG"} />
-          </span>
-
+          { assets }
         </div>
       </main>
 

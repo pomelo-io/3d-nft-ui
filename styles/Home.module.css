@@ -70,7 +70,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .card {
@@ -91,7 +91,15 @@
   color: #0070f3;
   border-color: #0070f3;
 }
-
+.ipfs {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  word-wrap: break-word;
+}
 .scene {
   border: 1px solid #eaeaea;
   border-radius: 10px;
