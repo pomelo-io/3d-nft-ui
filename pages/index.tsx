@@ -36,7 +36,7 @@ const Home: NextPage = () => {
   ]
 
   const assets = ipfs.map((ipfs) => {
-    return <span className={styles.card}>
+    return <span className={styles.card} key={ipfs}>
       <h2>3D Asset &rarr;</h2>
       <Scene ipfs={ipfs} />
       <div className={styles.ipfs}>{ipfs}</div>
