@@ -15,7 +15,7 @@ const Scene = ({ipfs}: {ipfs: string}) => {
     <Bounds fit clip observe damping={6} margin={1.2}>
       <Model ipfs={ipfs} />
       <Environment preset="city" />
-      <OrbitControls autoRotate rotateSpeed={0.3} makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 1.75} />
+      <OrbitControls autoRotate rotateSpeed={0.5} makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 1.75} />
       <PerspectiveCamera position={[40, 40, 40]} makeDefault />
     </Bounds>
   </Canvas>
