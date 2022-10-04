@@ -13,7 +13,7 @@ const Scene = ({ipfs}: {ipfs: string}) => {
   return (
   <Canvas className={styles.scene}>
     <Model ipfs={ipfs} />
-    <OrbitControls autoRotate={false} />
+    <OrbitControls autoRotate={true} />
     <Environment preset="city" />
   </Canvas>
   );
@@ -22,7 +22,7 @@ const Scene = ({ipfs}: {ipfs: string}) => {
 const Model = ({ipfs}: {ipfs: string}) => {
   const gltf = useLoader(GLTFLoader, `./${ipfs}.gltf`);
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={null} >
       <primitive object={gltf.scene} />
     </Suspense>
   )
